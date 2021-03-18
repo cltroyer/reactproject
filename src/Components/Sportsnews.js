@@ -10,9 +10,9 @@ const Sportsnews = () => {
     let urlList = [];
 
 
-    info.map((list) => urlList.push(list.links.api.news.href));
+    info.map((list) => urlList.push(list.links.api.news.href.replace('http', 'https')));
     return Promise.all( urlList.map((url) =>{
-        return fetch(url ,{referrerPolicy: "unsafe-url"})
+        return fetch(url)
             .then((res) => res.json())
             .then((data) => {
                 return data.headlines? data.headlines[0].description: "" ;

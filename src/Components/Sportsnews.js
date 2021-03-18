@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row } from "react-bootstrap";
 
 
 const Sportsnews = () => {
@@ -53,7 +53,7 @@ const Sportsnews = () => {
     <div className="container">
     <h1>Sports</h1>
       <div className="container">
-        <div className="row">
+        <Row xs={1} md={3} xl={3}>
           {sportsNews.map((game, index) => (
             <Card style={{ width: "33.3%" }}>
               <Card.Img variant="top" src={game.images[0].url} />
@@ -68,7 +68,7 @@ const Sportsnews = () => {
               </Card.Body>
             </Card>
           ))}
-        </div>
+        </Row>
       </div>
       </div>
     </>

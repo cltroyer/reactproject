@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Alertzip from "./Alertzip";
 import { Alertprov } from "./WeatherContext";
@@ -89,7 +89,7 @@ const Forcast = () => {
           <button type="submit">Submit</button>
         </form>
         <div className="container">
-          <div className="row">
+        <Row xs={1} sm={2} md={3} lg={4} xl={5}>
             {rep.list.map((day) => (
               <Card style={{ width: "20%" }}>
                 <Card.Body>
@@ -121,7 +121,7 @@ const Forcast = () => {
                 </Card.Body>
               </Card>
             ))}
-          </div>
+          </Row>
         </div>
       </div>
     </>

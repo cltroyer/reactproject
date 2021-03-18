@@ -4,8 +4,6 @@ import { Card } from "react-bootstrap";
 import Alertzip from "./Alertzip";
 
 
-console.log(process.env.REACT_APP_API_KEY);
-
 const Weather = () => {
   const [rep, setRep] = useState(null);
   const [zip, setZip] = useContext(WeatherContext);

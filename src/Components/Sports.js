@@ -6,7 +6,7 @@ const Sports = () => {
 
   const fetchSportsData = () => {
     const url =
-      "http://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard";
+      "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard";
 
     fetch(url)
       .then((res) => res.json())

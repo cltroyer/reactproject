@@ -21,7 +21,7 @@ const Sportsnews = () => {
   };
 
   const fetchSportsData = () => {
-    const url = "http://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news";
+    const url = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news";
     
     fetch(url)
       .then((res) => res.json())

@@ -12,7 +12,7 @@ const Sportsnews = () => {
 
     info.map((list) => urlList.push(list.links.api.news.href));
     return Promise.all( urlList.map((url) =>{
-        return fetch(url)
+        return fetch(url ,{referrerPolicy: "unsafe-url"})
             .then((res) => res.json())
             .then((data) => {
                 return data.headlines? data.headlines[0].description: "" ;
